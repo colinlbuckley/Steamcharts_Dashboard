@@ -62,7 +62,7 @@ scrape_game_table <- function(game_link, n = 1, starting_bow = bow_steamcharts) 
     
 }
 
-# # Following code commented to allow for easy sourcing from other files.
+# Following code commented to allow for easy sourcing from other files.
 
 # # Iterate to scrape top 100 games by current player count (4 pages @ 25 games per page)
 # top_100 <- map_df(.x = paste("https://steamcharts.com/top/p.", 1:4, sep = ""),
@@ -70,8 +70,8 @@ scrape_game_table <- function(game_link, n = 1, starting_bow = bow_steamcharts) 
 # 
 # # Extract monthly time series player counts for each game
 # top_games_ts <- map2_dfr(.x = top_100$Link, .y = 1:100,
-#             ~ scrape_game_table(game_link = .x, n = .y))
+#              ~ scrape_game_table(game_link = .x, n = .y))
 # 
 # # Write both to .csv file with current date
-# write_csv(top_100, file = paste("Data/top_100_games_", Sys.Date(), ".csv", sep = "")) 
+# write_csv(top_100, file = paste("Data/top_100_games_", Sys.Date(), ".csv", sep = ""))
 # write_csv(top_games_ts, file = paste("Data/top_100_timeseries_monthly_", Sys.Date(), ".csv", sep = ""))

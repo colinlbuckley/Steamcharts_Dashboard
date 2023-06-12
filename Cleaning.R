@@ -3,9 +3,9 @@ library(lubridate)
 library(stringr)
 
 # Import saved .csv
-top_100_timeseries <- read_csv("Data/top_100_timeseries_monthly_2022-06-06.csv", 
+top_100_timeseries <- read_csv("Data/top_100_timeseries_monthly_2023-06-12.csv", 
                                na = c("-", "NA"))
-top_100_games <- read_csv("Data/top_100_games_2022-06-06.csv")
+top_100_games <- read_csv("Data/top_100_games_2023-06-12.csv")
 
 # Cleaning
 ts_cleaned <- top_100_timeseries %>%
